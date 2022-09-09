@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     container:
       image: maven:3.3-jdk-8
-      options: --user root
+      #options: --user root
     steps:
     - name: Checkout Github Action
       uses: actions/checkout@v3
