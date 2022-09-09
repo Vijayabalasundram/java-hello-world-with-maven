@@ -8,6 +8,8 @@ jobs:
     container:
       image: maven:3.3-jdk-8
       #options: --user root
+      volumes:
+        - /home/ubuntu/:/__w/java-hello-world-with-maven/java-hello-world-with-maven
     steps:
     - name: Checkout Github Action
       uses: actions/checkout@v3
