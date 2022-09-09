@@ -1,20 +1,12 @@
-name: Maven CI/CD
-
+name: Maven-version
 on:
- push:
+  push:
     branches: [ master ]
-
 jobs:
-  build_and_test:
-
+  container-test-job:
     runs-on: ubuntu-latest
-
+    container:
+      image: maven:3.3-jdk-8
     steps:
-    - uses: actions/checkout@v2
-    - name: Set up JDK 11
-      uses: actions/setup-java@v1
-      with:
-        java-version: 11
-
-    - name: Build project with update Maven version
-      run: mvn clean versions:set -DnewVersion=0.4.0 --file pom.xml
+    - name: Checkout Github Action
+      uses: actions/checkout@v3
