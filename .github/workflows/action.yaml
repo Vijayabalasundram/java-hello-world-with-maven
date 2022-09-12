@@ -15,4 +15,4 @@ jobs:
           java-version: 8
       - if: github.event.release
         name: Update version in pom.xml (Release only)
-        run: mvn -B versions:set -DnewVersion=${{ github.event.release.tag_name }} -DgenerateBackupPoms=false
+        run: mvn -B versions:set -DnewVersion=0.4.0 -DgenerateBackupPoms=false
