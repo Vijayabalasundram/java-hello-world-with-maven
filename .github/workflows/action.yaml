@@ -19,4 +19,4 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
     - name: Build with Maven
-      run: mvn clean versions:set -DnewVersion=0.4.0
+      run: mvn clean versions:set -DnewVersion=0.4.0 --file pom.xml
